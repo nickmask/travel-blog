@@ -1,13 +1,7 @@
 {
-  "name": "Contentful Gatsby Starter",
-  "description": "Gatsby starter for a Contentful project.",
-  "keywords": [
-    "contentful",
-    "gatsby",
-    "static",
-    "ssg"
-  ],
-  "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
+  "name": "Travel Blog",
+  "description": "Travel blog written by Tess",
+  "repository": "https://github.com/nickmask/travel-blog",
   "success_url": "/",
   "buildpacks": [
     {
