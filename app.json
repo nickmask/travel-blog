@@ -1,7 +1,7 @@
 {
   "name": "Travel Blog",
   "description": "Travel blog written by Tess",
-  "repository": "https://github.com/nickmask/travel-blog",
+  "repository": "https://github.com/nickmask",
   "success_url": "/",
   "buildpacks": [
     {
