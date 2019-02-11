@@ -1,0 +1,9 @@
+.hero {
+  background: #000;
+  color: #fff;
+}
+
+.heroImage {
+  max-height: 50vh;
+  max-height: 400px;
+}

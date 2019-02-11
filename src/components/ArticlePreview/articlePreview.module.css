@@ -1,5 +1,20 @@
+.preview {
+  display: flex;
+  flex-direction: row;
+}
+
 .previewTitle {
   font-size: 1.5em;
+  margin-top: 0;
+}
+
+.previewImage {
+  min-width: 300px;
+  min-height: 200px
+}
+
+.previewTextBox {
+  margin-left: 20px;
 }
 
 .tag {
