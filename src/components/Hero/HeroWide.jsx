@@ -11,5 +11,13 @@ export default ({ data }) => (
       fluid={data.heroImage.fluid}
       maxHeight="375.45px"
     />
+    <div className={styles.headLineWrapper}>
+      <div className={styles.headLine}>
+        eat<span className={styles.stay}>stay</span>leave
+      </div>
+      <div className={styles.subHeadLine}>
+        This is a blog for writing and doing things
+      </div>
+    </div>
   </div>
 )
