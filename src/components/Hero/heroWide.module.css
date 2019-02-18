@@ -18,8 +18,10 @@
 }
 
 .headLine {
-  font-size: 2.9em;
+  font-size: 5em;
   text-shadow: rgb(150, 150, 150) 1px 1px 8px;
+  font-family: 'Marcellus SC';
+  max-width: 600px;
 }
 
 .subHeadLine {

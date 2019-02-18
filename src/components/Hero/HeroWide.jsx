@@ -1,6 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
+import logo from '../../../static/logo-white.png'
 import styles from './heroWide.module.css'
 
 export default ({ data }) => (
@@ -13,7 +14,7 @@ export default ({ data }) => (
     />
     <div className={styles.headLineWrapper}>
       <div className={styles.headLine}>
-        eat<span className={styles.stay}>stay</span>leave
+        <img src={logo} alt="eatstayleave logo" />
       </div>
       <div className={styles.subHeadLine}>
         This is a blog for writing and doing things
