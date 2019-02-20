@@ -1,5 +1,5 @@
 {
-  "name": "travel-blog",
+  "name": "eat-stay-leave",
   "description": "Contentful & Gatsby travel blog",
   "version": "1.0.0",
   "author": "Nick Maskell <nrmaskell@gmail.com>",
@@ -33,7 +33,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nickmask/travel-blog.git"
+    "url": "git+https://github.com/nickmask/eat-stay-leave.git"
   },
   "scripts": {
     "dev": "gatsby develop",

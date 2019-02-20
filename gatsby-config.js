@@ -21,7 +21,7 @@ if (!spaceId || !accessToken) {
 }
 
 module.exports = {
-  pathPrefix: '/travel-blog',
+  pathPrefix: '/',
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
