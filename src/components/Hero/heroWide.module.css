@@ -24,8 +24,18 @@
   max-width: 600px;
 }
 
+@media screen and (min-width: 320px) {
+  .subHeadLine {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  .subHeadLine {
+    font-size: 22px;
+  }
+}
+
 .subHeadLine {
-  font-size: 1.6em;
   text-shadow: rgb(150, 150, 150) 1px 1px 8px;
 }
 

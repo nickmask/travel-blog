@@ -1,6 +1,12 @@
 .preview {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 650px) {
+  .preview {
+    flex-direction: row;
+  }
 }
 
 .previewTitle {
@@ -10,7 +16,7 @@
 
 .previewImage {
   min-width: 300px;
-  min-height: 200px
+  min-height: 200px;
 }
 
 .previewTextBox {
@@ -18,12 +24,12 @@
 }
 
 .tag {
-  color: #A0A0A0;
+  color: #a0a0a0;
   text-decoration: none;
   display: inline-block;
-  padding: .33333rem .5rem;
+  padding: 0.33333rem 0.5rem;
   line-height: 1;
   border-radius: 2px;
-  border: 1px solid #A0A0A0;
-  margin-right: .5em;
+  border: 1px solid #a0a0a0;
+  margin-right: 0.5em;
 }

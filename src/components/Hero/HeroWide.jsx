@@ -17,7 +17,7 @@ export default ({ data }) => (
         <img src={logo} alt="eatstayleave logo" />
       </div>
       <div className={styles.subHeadLine}>
-        This is a blog for writing and doing things
+        Tess and Nick rolling through Asia, two dumplings at a time
       </div>
     </div>
   </div>
