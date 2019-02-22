@@ -31,5 +31,18 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-75872820-2',
+        head: false,
+        anonymize: false,
+        respectDNT: true,
+        exclude: ['/preview/**', '/do-not-track/me/too/'],
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: 'eatstayleave.com',
+      },
+    },
   ],
 }
