@@ -19,3 +19,9 @@ Run a production build into `./public` and publish the site to GitHub pages.
 ### `yarn run cleanup-repository`
 
 Removes all dependencies, scripts and data from the installation script.
+
+## To do
+
+- [ ] Add footer
+- [ ] Add social media links
+- [ ] Add tags links to filtered posts
