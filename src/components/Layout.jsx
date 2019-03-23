@@ -1,13 +1,17 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import get from 'lodash/get'
+import { StaticQuery, graphql } from 'gatsby'
+
 import base from './base.css'
 import Container from './Container'
-import Navigation from './Navigation/Navigation'
 import Footer from './Footer/Footer'
+import Header from './Header/Header'
+import Navigation from './Navigation/Navigation'
 
-class Template extends React.Component {
+class Layout extends React.Component {
   render() {
     const { location, children } = this.props
+
     let header
 
     let rootPath = `/`
@@ -15,14 +19,59 @@ class Template extends React.Component {
       rootPath = __PATH_PREFIX__ + `/`
     }
 
+    // Current situation. I have my graphQL query retrieving the sub header but it can't figure out how it is using the image packages to get a fluid image. I updated two of those packages and now all the queries might have broken. Not sure on that yet.
+
     return (
       <Container>
         <Navigation />
-        {children}
+        <StaticQuery
+          query={graphql`
+            query HeadingQuery {
+              allContentfulHeader(
+                filter: { contentful_id: { eq: "709jmMnCweFralbN6pbHXn" } }
+              ) {
+                edges {
+                  node {
+                    headerLogoImage: headerLogoImage {
+                      fluid(
+                        maxWidth: 1180
+                        maxHeight: 480
+                        resizingBehavior: SCALE
+                      ) {
+                        ...GatsbyContentfulFluid_tracedSVG
+                      }
+                    }
+                    subHeaderText
+                  }
+                }
+              }
+            }
+          `}
+          render={data => (
+            <Header data={data.allContentfulHeader.edges[0].node} />
+          )}
+        />
+        <div className="leftSidebar" />
+        <main>{children}</main>
+        <div className="rightSidebar" />
         <Footer />
       </Container>
     )
   }
 }
 
-export default Template
+export default Layout
+
+// export const query = graphql`
+//   query HeaderQuery {
+//     allContentfulHeader(
+//       filter: { contentful_id: { eq: "709jmMnCweFralbN6pbHXn" } }
+//     ) {
+//       edges {
+//         node {
+//           subHeaderText
+//         }
+//       }
+//     }
+//   }
+// `
