@@ -59,17 +59,3 @@ class Layout extends React.Component {
 }
 
 export default Layout
-
-// export const query = graphql`
-//   query HeaderQuery {
-//     allContentfulHeader(
-//       filter: { contentful_id: { eq: "709jmMnCweFralbN6pbHXn" } }
-//     ) {
-//       edges {
-//         node {
-//           subHeaderText
-//         }
-//       }
-//     }
-//   }
-// `
