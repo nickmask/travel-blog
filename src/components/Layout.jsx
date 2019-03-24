@@ -41,6 +41,15 @@ class Layout extends React.Component {
                         ...GatsbyContentfulFluid_tracedSVG
                       }
                     }
+                    headerImage: headerImages {
+                      fluid(
+                        maxWidth: 1180
+                        maxHeight: 480
+                        resizingBehavior: SCALE
+                      ) {
+                        ...GatsbyContentfulFluid_tracedSVG
+                      }
+                    }
                     subHeaderText
                   }
                 }
