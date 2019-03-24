@@ -13,16 +13,11 @@ export default ({ data }) => (
       fluid={data.headerImage[1].fluid}
       maxHeight="375.45px"
     />
-    <div className={styles.headerLineWrapper}>
-      <div className={styles.headerLine}>
-        {/* <Img
-          // className={styles.headerLogoImage}
-          alt={data.name}
-          fluid={data.headerLogoImage.fluid}
-        /> */}
+    <div className={styles.headerLogoWrapper}>
+      <div className={styles.headerLogo}>
         <img src={logo} alt="eatstayleave logo" />
       </div>
-      <div className={styles.subHeaderLine}>{data.subHeaderText}</div>
+      <div className={styles.subHeaderLogo}>{data.subHeaderText}</div>
     </div>
   </header>
 )

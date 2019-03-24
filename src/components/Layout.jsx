@@ -19,8 +19,6 @@ class Layout extends React.Component {
       rootPath = __PATH_PREFIX__ + `/`
     }
 
-    // Current situation. I have my graphQL query retrieving the sub header but it can't figure out how it is using the image packages to get a fluid image. I updated two of those packages and now all the queries might have broken. Not sure on that yet.
-
     return (
       <Container>
         <Navigation />
@@ -32,15 +30,6 @@ class Layout extends React.Component {
               ) {
                 edges {
                   node {
-                    headerLogoImage: headerLogoImage {
-                      fluid(
-                        maxWidth: 1180
-                        maxHeight: 480
-                        resizingBehavior: SCALE
-                      ) {
-                        ...GatsbyContentfulFluid_tracedSVG
-                      }
-                    }
                     headerImage: headerImages {
                       fluid(
                         maxWidth: 1180
