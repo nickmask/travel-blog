@@ -15,7 +15,12 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
+          <Helmet title={siteTitle}>
+            <script
+              src="https://cdn.embedly.com/widgets/platform.js"
+              type="text/javascript"
+            />
+          </Helmet>
           <div className="wrapper">
             <h2 className="section-headline">Recent posts</h2>
             <ul className="article-list">

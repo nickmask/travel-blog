@@ -10,12 +10,11 @@ import styles from './blogPost.module.css'
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-
+    const siteTitle = 'EAT·STAY·LEAVE'
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
+          <Helmet title={`${siteTitle} | ${post.title}`} />
           <div className={styles.headerWrapper}>
             <Img
               className={styles.heroImage}

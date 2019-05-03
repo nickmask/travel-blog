@@ -18,6 +18,18 @@
   padding: 0 0 10px 0;
   border-bottom: 2px solid #ddd;
   margin-bottom: 10px;
+  text-shadow: rgb(150, 150, 150) 1px 1px 8px;
+}
+
+@media screen and (min-width: 320px) {
+  .headerText {
+    font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  .headerText {
+    font-size: 37px;
+  }
 }
 
 .heroImage {
