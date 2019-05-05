@@ -1,13 +1,17 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import get from 'lodash/get'
+import { StaticQuery, graphql } from 'gatsby'
+
 import base from './base.css'
 import Container from './Container'
-import Navigation from './Navigation/Navigation'
 import Footer from './Footer/Footer'
+import Header from './Header/Header'
+import Navigation from './Navigation/Navigation'
 
-class Template extends React.Component {
+class Layout extends React.Component {
   render() {
     const { location, children } = this.props
+
     let header
 
     let rootPath = `/`
@@ -18,11 +22,40 @@ class Template extends React.Component {
     return (
       <Container>
         <Navigation />
-        {children}
+        <StaticQuery
+          query={graphql`
+            query HeadingQuery {
+              allContentfulHeader(
+                filter: { contentful_id: { eq: "709jmMnCweFralbN6pbHXn" } }
+              ) {
+                edges {
+                  node {
+                    headerImage: headerImages {
+                      fluid(
+                        maxWidth: 1180
+                        maxHeight: 480
+                        resizingBehavior: SCALE
+                      ) {
+                        ...GatsbyContentfulFluid_tracedSVG
+                      }
+                    }
+                    subHeaderText
+                  }
+                }
+              }
+            }
+          `}
+          render={data => (
+            <Header data={data.allContentfulHeader.edges[0].node} />
+          )}
+        />
+        <div className="leftSidebar" />
+        <main>{children}</main>
+        <div className="rightSidebar" />
         <Footer />
       </Container>
     )
   }
 }
 
-export default Template
+export default Layout

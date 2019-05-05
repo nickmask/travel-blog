@@ -22,6 +22,14 @@ Removes all dependencies, scripts and data from the installation script.
 
 ## To do
 
-- [ ] Add footer
+- [x] Add footer
 - [ ] Add social media links
 - [ ] Add tags links to filtered posts
+- [ ] Add carosel for hero images
+
+## Fixes
+
+- [ ] Hero image Logo resolution reduction and add shadow color for reading on white backgrounds
+- [ ] Nav logo resolution reduction
+- [ ] Fix post preview spacing on mobile
+- [ ] Super wide images get stretched in post preivew

@@ -1,0 +1,36 @@
+header {
+  background: #000;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.headerImage {
+  max-height: 400px;
+}
+
+.headerLogoWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.headerLogo {
+  max-width: 600px;
+}
+
+.subHeaderLogo {
+  text-shadow: rgb(150, 150, 150) 1px 1px 8px;
+}
+
+@media screen and (min-width: 320px) {
+  .subHeaderLogo {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  .subHeaderLogo {
+    font-size: 22px;
+  }
+}
