@@ -20,6 +20,7 @@ class BlogPostTemplate extends React.Component {
               className={styles.heroImage}
               alt={post.title}
               fluid={post.heroImage.fluid}
+              property="og:image"
             />
             <div className={styles.headerTextWrapper}>
               <h1 className={styles.headerText}>{post.title}</h1>
