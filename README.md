@@ -31,5 +31,5 @@ Removes all dependencies, scripts and data from the installation script.
 
 - [ ] Hero image Logo resolution reduction and add shadow color for reading on white backgrounds
 - [ ] Nav logo resolution reduction
-- [ ] Fix post preview spacing on mobile
+- [x] Fix post preview spacing on mobile
 - [ ] Super wide images get stretched in post preivew
