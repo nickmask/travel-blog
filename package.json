@@ -28,7 +28,7 @@
     "inquirer": "^6.2.1",
     "prettier": "^1.16.1",
     "rimraf": "^2.6.3",
-    "yargs-parser": "^11.1.1"
+    "yargs-parser": "^13.1.2"
   },
   "license": "MIT",
   "main": "n/a",
