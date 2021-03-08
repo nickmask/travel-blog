@@ -23,6 +23,17 @@ if (!spaceId || !accessToken) {
 module.exports = {
   pathPrefix: '/',
   plugins: [
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        // your google analytics tracking id
+        trackingId: `UA-134989240-1`,
+        // Puts tracking script in the head instead of the body
+        head: true,
+        // enable ip anonymization
+        anonymize: true,
+      },
+    },
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
@@ -30,19 +41,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-134989240-1',
-        head: false,
-        anonymize: false,
-        respectDNT: true,
-        exclude: ['/preview/**', '/do-not-track/me/too/'],
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: 'eatstayleave.com',
-      },
     },
   ],
 }
